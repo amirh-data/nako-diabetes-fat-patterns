@@ -22,7 +22,7 @@ OUTPUT_DIR = Path(
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_csv(ANALYSIS_TABLE)
+    df = pd.read_csv(ANALYSIS_TABLE, sep=";", decimal=",")
 
     print("Loaded table:")
     print(df.shape)
