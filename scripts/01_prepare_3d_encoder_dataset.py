@@ -27,17 +27,18 @@ def main():
     print("Loaded table:")
     print(df.shape)
 
-    # Keep only normal and T2D for first experiment
-    df = df[df["diabetes_group"].isin(["normal", "T2D"])].copy()
+    # Keep normal + prediabetes + T2D
+    df = df[df["diabetes_group"].isin(["normal", "prediabetes", "T2D"])].copy()
 
-    print("After keeping normal and T2D only:")
+    print("After keeping all valid groups:")
     print(df["diabetes_group"].value_counts())
 
-    # Binary label
+    # Binary label: disease vs normal
     df["label"] = df["diabetes_group"].map({
         "normal": 0,
+        "prediabetes": 1,
         "T2D": 1,
-    })
+})
 
     # Create expected paths
     df["fat_path"] = df["NAKO_ID"].apply(
