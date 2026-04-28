@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environments
+.venv/
+env/
+
+# Data (DO NOT UPLOAD)
+*.csv
+*.tsv
+*.nii
+*.nii.gz
+*.npy
+*.npz
+
+# Models
+*.pt
+*.pth
+
+# Outputs
+outputs/
+results/
+logs/
+checkpoints/
+
+# SLURM
+*.out
+*.err
+
+# IDE
+.vscode/
+.DS_Store
