@@ -6,15 +6,15 @@ from scipy.ndimage import zoom
 
 
 CASE_LIST = Path(
-    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/encoder_3d_cases.csv"
+    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/encoder_3d_cases_balanced_2000.csv"
 )
 
 OUTPUT_DIR = Path(
-    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/npz_96"
+    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/npz_96_balanced_2000"
 )
 
 TARGET_SHAPE = (96, 96, 96)  # z, y, x
-MAX_CASES = 20  # start small for testing
+MAX_CASES = None  # start small for testing
 
 
 def load_nifti(path):
