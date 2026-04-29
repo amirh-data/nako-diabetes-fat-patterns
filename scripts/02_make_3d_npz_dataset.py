@@ -6,11 +6,11 @@ from scipy.ndimage import zoom
 
 
 CASE_LIST = Path(
-    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/encoder_3d_cases_balanced_2000.csv"
+    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/encoder_3d_cases_balanced_t2d_3000.csv"
 )
 
 OUTPUT_DIR = Path(
-    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/npz_96_balanced_2000"
+    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/npz_96_balanced_t2d_3000"
 )
 
 TARGET_SHAPE = (96, 96, 96)  # z, y, x

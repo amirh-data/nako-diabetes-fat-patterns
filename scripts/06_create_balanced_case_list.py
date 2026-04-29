@@ -10,8 +10,8 @@ OUT_DIR = Path(
     "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset"
 )
 
-N_NORMAL = 1000
-N_POSITIVE = 1000
+N_NORMAL = 1500
+N_POSITIVE = 1500
 RANDOM_SEED = 42
 
 
@@ -37,7 +37,7 @@ def main():
     balanced = pd.concat([normal_sample, positive_sample], axis=0)
     balanced = balanced.sample(frac=1, random_state=RANDOM_SEED).reset_index(drop=True)
 
-    out_csv = OUT_DIR / "encoder_3d_cases_balanced_2000.csv"
+    out_csv = OUT_DIR / "encoder_3d_cases_balanced_t2d_3000.csv"
     balanced.to_csv(out_csv, index=False)
 
     print("\nBalanced counts:")
