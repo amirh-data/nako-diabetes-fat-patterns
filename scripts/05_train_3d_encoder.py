@@ -8,11 +8,11 @@ from src.models.cnn3d_mlp import CNN3DMLP
 
 
 CSV_PATH = Path(
-    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/npz_96/prepared_npz_cases.csv"
+    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/npz_96_balanced_t2d_3000/prepared_npz_cases.csv"
 )
 
 OUT_DIR = Path(
-    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/checkpoints"
+    "/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/encoder_3d_dataset/checkpoints_t2d_3000"
 )
 
 
@@ -41,7 +41,7 @@ def main():
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 
-    num_epochs = 3
+    num_epochs = 20
 
     for epoch in range(num_epochs):
         model.train()
