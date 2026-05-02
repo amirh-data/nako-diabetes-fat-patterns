@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=train3d_t2d
+#SBATCH --job-name=overfit100
 #SBATCH --partition=student
 #SBATCH --nodelist=node-gpu-01
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
-#SBATCH --time=12:00:00
+#SBATCH --time=04:00:00
 #SBATCH --output=/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/logs/%x_%j.out
 #SBATCH --error=/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/logs/%x_%j.err
 
@@ -22,6 +22,9 @@ export PYTHONNOUSERSITE=1
 
 cd ~/nako-diabetes-fat-patterns
 
-python -u -m scripts.05_train_3d_encoder
+which python
+python -c "import torch; print('torch', torch.__version__, 'cuda', torch.cuda.is_available())"
+
+python -u -m scripts.09_train_overfit_100
 
 echo "Finished at $(date)"

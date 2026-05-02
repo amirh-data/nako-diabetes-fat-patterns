@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=train3d_t2d
+#SBATCH --job-name=extract_emb
 #SBATCH --partition=student
 #SBATCH --nodelist=node-gpu-01
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
-#SBATCH --time=12:00:00
+#SBATCH --time=10:00:00
 #SBATCH --output=/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/logs/%x_%j.out
 #SBATCH --error=/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1/logs/%x_%j.err
 
@@ -22,6 +22,6 @@ export PYTHONNOUSERSITE=1
 
 cd ~/nako-diabetes-fat-patterns
 
-python -u -m scripts.05_train_3d_encoder
+python -u -m scripts.12_extract_image_embeddings
 
 echo "Finished at $(date)"
