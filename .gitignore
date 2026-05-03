@@ -1,33 +1,29 @@
+# Data
+*.csv
+*.tsv
+*.xlsx
+*.nii
+*.nii.gz
+*.npz
+
+# Model/checkpoint files
+*.pt
+*.pth
+*.ckpt
+
+# Outputs
+logs/
+results/
+outputs/
+checkpoints/
+models/
+
 # Python
 __pycache__/
 *.pyc
-
-# Environments
 .venv/
-env/
+.env
 
-# Data (DO NOT UPLOAD)
-*.csv
-*.tsv
-*.nii
-*.nii.gz
-*.npy
-*.npz
-
-# Models
-*.pt
-*.pth
-
-# Outputs
-outputs/
-results/
-logs/
-checkpoints/
-
-# SLURM
-*.out
-*.err
-
-# IDE
-.vscode/
+# System
 .DS_Store
+Thumbs.db
