@@ -122,3 +122,19 @@ Grad-CAM spatial attention maps and SHAP feature importance.
 Data not included (NAKO cohort, restricted access).
 Model checkpoints not included (file size).
 Please contact supervisors for data access information.
+
+## Configuration
+
+All scripts use hardcoded paths pointing to the NAKO cluster storage.
+To adapt for a different environment, update the BASE path variable
+at the top of each script:
+
+```python
+BASE = Path("/mnt/qdata/projects/StudentsMarius/194_preds/studhaget1")
+```
+
+Replace this with your own data directory containing:
+- quantification_full/analysis_table_with_diabetes_labels.csv
+- cohorts/nako_t2d_normal_matched_cohort.csv
+- cached_nifti128/matched_fat_water_trunkseg/
+- cached_nifti128/full_fat_water_trunkseg/
