@@ -27,3 +27,12 @@ __pycache__/
 # System
 .DS_Store
 Thumbs.db
+
+# Debug and test files
+check_csv.py
+check_env.py
+debug_*.py
+test_batch.py
+make_experiment_sbatches.py
+scripts/debug_*.py
+scripts/35_train_debug.py
